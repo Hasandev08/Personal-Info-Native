@@ -3,53 +3,54 @@ import { Image, StyleSheet, Text, View } from 'react-native'
 
 import colors from '../config/colors'
 
-function Header(props) {
-  return (
-    <View style={styles.card}>
-      <View style={styles.imageBackground}>
-        <Image source={require('../assets/profile.jpeg')} style={styles.image} />
-      </View>
-      <View style={styles.text}>
-        <Text style={styles.name}>HASAN AHMED</Text>
-        <Text style={styles.title}>React Native Developer</Text>
-      </View>
+const Header = (props) => (
+  <View style={styles.card}>
+    <View style={styles.imageBackground}>
+      <Image source={require('../assets/profile.jpeg')} style={styles.image} />
     </View>
-  )
-}
+    <View style={styles.text}>
+      <Text style={styles.name}>Hasan Ahmed</Text>
+      <Text style={styles.title}>React Native Developer</Text>
+    </View>
+  </View>
+)
 
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.white,
     width: '90%',
-    height: 80,
-    paddingLeft: 20,
+    height: 220,
     borderRadius: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  imageBackground: {
-    backgroundColor: colors.black,
-    width: 70,
-    height: 70,
-    borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
+    marginBottom: 20,
+  },
+  imageBackground: {
+    backgroundColor: colors.imageBackground,
+    width: 110,
+    height: 110,
+    borderRadius: 55,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 10,
   },
   image: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
   },
   text: {
-    flexDirection: 'column',
-    paddingLeft: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.white,
   },
   name: {
     fontSize: 24,
     fontWeight: 'bold',
+    marginBottom: 3,
   },
   title: {
-    fontSize: 12,
+    fontSize: 14,
   },
 })
 
