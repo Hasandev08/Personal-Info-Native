@@ -1,13 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 
-import colors from '../config/colors'
+import { styles } from './style'
 
-const ButtonBar = ({ setAbout, setExperience, setProjects }) => (
+const ButtonBar = ({ setAbout, setEducation, setExperience, setProjects }) => (
   <View style={styles.bar}>
     <TouchableOpacity
       onPress={() => {
         setAbout(true)
+        setEducation(false)
         setExperience(false)
         setProjects(false)
       }}
@@ -15,9 +16,19 @@ const ButtonBar = ({ setAbout, setExperience, setProjects }) => (
       <Text style={styles.text}>About</Text>
     </TouchableOpacity>
     <TouchableOpacity
-      style={styles.experience}
       onPress={() => {
         setAbout(false)
+        setEducation(true)
+        setExperience(false)
+        setProjects(false)
+      }}
+    >
+      <Text style={styles.text}>Education</Text>
+    </TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => {
+        setAbout(false)
+        setEducation(false)
         setExperience(true)
         setProjects(false)
       }}
@@ -27,6 +38,7 @@ const ButtonBar = ({ setAbout, setExperience, setProjects }) => (
     <TouchableOpacity
       onPress={() => {
         setAbout(false)
+        setEducation(false)
         setExperience(false)
         setProjects(true)
       }}
@@ -35,29 +47,5 @@ const ButtonBar = ({ setAbout, setExperience, setProjects }) => (
     </TouchableOpacity>
   </View>
 )
-
-const styles = StyleSheet.create({
-  bar: {
-    width: '80%',
-    height: 40,
-    backgroundColor: colors.theme,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    borderRadius: 10,
-    marginBottom: 25,
-  },
-  experience: {
-    borderColor: colors.white,
-    borderLeftWidth: 1,
-    borderRightWidth: 1,
-  },
-  text: {
-    color: colors.white,
-    fontWeight: 'bold',
-    paddingHorizontal: 25,
-    paddingVertical: 8,
-  },
-})
 
 export default ButtonBar

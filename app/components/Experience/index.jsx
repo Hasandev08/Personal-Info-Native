@@ -1,7 +1,7 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 
-import colors from '../config/colors'
+import { styles } from './style'
 
 const Experience = (props) => (
   <View style={styles.container}>
@@ -17,22 +17,5 @@ const Experience = (props) => (
     </View>
   </View>
 )
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.white,
-    width: '90%',
-    borderRadius: 20,
-  },
-  heading: {
-    padding: 10,
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  text: {
-    paddingLeft: 20,
-    paddingBottom: 10,
-  },
-})
 
 export default Experience

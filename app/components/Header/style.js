@@ -1,21 +1,8 @@
-import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 
-import colors from '../config/colors'
+import colors from '../../config/colors'
 
-const Header = (props) => (
-  <View style={styles.card}>
-    <View style={styles.imageBackground}>
-      <Image source={require('../assets/profile.jpeg')} style={styles.image} />
-    </View>
-    <View style={styles.text}>
-      <Text style={styles.name}>Hasan Ahmed</Text>
-      <Text style={styles.title}>React Native Developer</Text>
-    </View>
-  </View>
-)
-
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.white,
     width: '90%',
@@ -53,5 +40,3 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 })
-
-export default Header

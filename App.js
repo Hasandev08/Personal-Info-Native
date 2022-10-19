@@ -1,4 +1,5 @@
 import { Platform, StatusBar, StyleSheet, View } from 'react-native'
+
 import ProfileScreen from './app/screens/ProfileScreen'
 
 import colors from './app/config/colors'

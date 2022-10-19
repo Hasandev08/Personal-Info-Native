@@ -1,9 +1,8 @@
 import React from 'react'
 import { View } from 'react-native'
 
-import Contact from './Contact'
-import Education from './Education'
-import PersonalInfo from './PersonalInfo'
+import Contact from '../Contact/index'
+import PersonalInfo from '../PersonalInfo/index'
 
 const About = (props) => (
   <View>
@@ -14,7 +13,6 @@ const About = (props) => (
       github='HasanAhmed987'
       linkedin='hasandeveloper123'
     />
-    <Education />
     <PersonalInfo />
   </View>
 )

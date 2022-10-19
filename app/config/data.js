@@ -12,3 +12,6 @@ export const educationData = [
   { key: 'Bachelors of Computer Science' },
   { key: 'University of Engineering & Technology, Lahore, Pakistan' },
 ]
+
+export const info =
+  'I am a hardworking undergrad student currently studying in University of Engineering & Technology, Lahore, Pakistan. I am in final year and looking for an opportunity to work in react. I have been working on react for a long time and have a good experience in it. I am a dedicated student with good leadership and management skills.'
