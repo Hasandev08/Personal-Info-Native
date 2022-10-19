@@ -1,20 +1,15 @@
 import React from 'react'
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 
+import { educationData } from '../config/data'
 import colors from '../config/colors'
 
 function Education(props) {
-  const data = [
-    { key: '2019-Present' },
-    { key: 'Bachelors of Computer Science' },
-    { key: 'University of Engineering & Technology, Lahore, Pakistan' },
-  ]
-
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Education</Text>
       <FlatList
-        data={data}
+        data={educationData}
         renderItem={({ item }) => (
           <View style={styles.bullets}>
             <Text style={{ fontSize: 8, paddingTop: 2 }}>{'\u2B24'}</Text>

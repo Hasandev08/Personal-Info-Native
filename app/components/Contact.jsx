@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 import { AntDesign, Entypo, FontAwesome, MaterialIcons } from '@expo/vector-icons'
+
 import colors from '../config/colors'
 
 const Contact = ({ contact, email, address, github, linkedin }) => (
@@ -35,7 +36,6 @@ const Contact = ({ contact, email, address, github, linkedin }) => (
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
-    width: 330,
     borderRadius: 15,
     paddingVertical: 8,
     marginBottom: 10,

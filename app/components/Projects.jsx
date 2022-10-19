@@ -1,23 +1,15 @@
 import React from 'react'
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 
+import { projectsData } from '../config/data'
 import colors from '../config/colors'
 
 function Projects(props) {
-  const data = [
-    { key: 'HR-Management System using ReactJs, MaterialUI, JSON Server' },
-    { key: 'CRUD Application using MERN Stack' },
-    { key: 'Ninettediogene Application using React Native' },
-    { key: 'COVID-19 Tracker using ReactJs' },
-    { key: 'Todo-List using ReactJs' },
-    { key: 'Weather Application using ReactJs' },
-  ]
-
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Education</Text>
       <FlatList
-        data={data}
+        data={projectsData}
         renderItem={({ item }) => (
           <View style={styles.bullets}>
             <Text style={{ fontSize: 8, paddingVertical: 2 }}>{'\u2B24'}</Text>
@@ -46,7 +38,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingBottom: 5,
     fontSize: 12,
-    fontWeight: '500',
   },
 })
 
